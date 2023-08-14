@@ -26,11 +26,12 @@
           </div>
         <% end %>
       </div>
-        <form action="/answer" data-turbo="false">
+        <form action="/score" data-turbo="false" method="post">
           <div class="d-flex justify-content-center align-items-center">
-            <input type="text" class="form-control" name="" placeholder="Enter your question">
-            <button type="submit" value="Ask!" class="btn btn-primary m-1">Ask!</button>
+            <input type="text" class="form-control" name="score" placeholder="C'mon chief, give me a mission">
+            <button type="submit" value="Give!" class="btn btn-primary m-1">Give!</button>
           </div>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %><%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         </form>
       </div>
   </div>
