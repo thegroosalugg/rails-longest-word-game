@@ -4,5 +4,6 @@ class GamesController < ApplicationController
   end
 
   def score
+    @user_answer = params[:score]
   end
 end
