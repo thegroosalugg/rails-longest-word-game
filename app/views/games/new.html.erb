@@ -20,7 +20,9 @@
             <input type="text" class="form-control" name="score" placeholder="C'mon chief, give me a mission">
             <button type="submit" value="Give!" class="btn btn-primary m-1">Give!</button>
           </div>
+          <%# required for the POST method to work %>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token %><%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <%# Required to access @letters in def new method as they have been posted %>
           <%= hidden_field_tag :letters, @letters %>
         </form>
       </div>

@@ -5,8 +5,9 @@ class GamesController < ApplicationController
 
   def score
     @user_answer = params[:score].upcase
+    @convert_user_to_array = @user_answer.chars
     @letters = params[:letters]
-    @result = @user_answer == @letters
+    @result = @convert_user_to_array.all? { |letter| @letters.include?(letter) }
     # raise
   end
 end
