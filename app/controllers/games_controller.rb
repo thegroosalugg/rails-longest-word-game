@@ -4,6 +4,9 @@ class GamesController < ApplicationController
   end
 
   def score
-    @user_answer = params[:score]
+    @user_answer = params[:score].upcase
+    @letters = params[:letters]
+    @result = @user_answer == @letters
+    # raise
   end
 end
