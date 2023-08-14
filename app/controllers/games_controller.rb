@@ -8,8 +8,8 @@ class GamesController < ApplicationController
   end
 
   def score
-    @user_answer = params[:score].upcase
-    @converted_array = @user_answer.chars
+    @user_answer = params[:score]
+    @converted_array = @user_answer.upcase.chars
     @letters = params[:letters]
     @match_data = @converted_array.all? { |letter| @letters.include?(letter) }
     # raise
